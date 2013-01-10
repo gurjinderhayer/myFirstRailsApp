@@ -1,0 +1,13 @@
+<p>
+  <b>Commenter:</b>
+  <%= comment.commenter %>
+</p> 
+<p>
+  <b>Comment: <%= link_to "edit" , edit_post_comment_path(@post, comment)%></b>
+  <%= comment.body %>
+</p>
+ <p>
+   <%= link_to 'Destroy Comment', [comment.post, comment],
+                :confirm => 'Are you sure?',
+                :method => :delete %>
+ </p>
